@@ -119,10 +119,10 @@
 							    <show_in_default>1</show_in_default>
 							    <show_in_website>1</show_in_website>
 							    <show_in_store>1</show_in_store>
+							</col_layout>
 <comment><![CDATA[If you choose "Custom" Position, then please use short codes:<br>
 For CMS Block: " {{block type="flikebox/Likebox"template="flikebox/like.phtml"}} " <br> 
-For Layout: " echo $this->getLayout()->createBlock('flikebox/Likebox')->setTemplate('flikebox/like.phtml')->toHtml(); "]]></comment>
-							</col_layout>
+For Layout: " $this->getLayout()->createBlock('flikebox/Likebox')->setTemplate('flikebox/like.phtml')->toHtml(); "]]></comment>
 					</fields>	
 		        </general>
 	        </groups>	       

@@ -44,9 +44,9 @@ class Vivacity_Flikebox_Block_Likebox extends Mage_Core_Block_Template
 				$width 			= Mage::helper('flikebox')->getWidth();
 				$height 		= Mage::helper('flikebox')->getHeight();
 			
-				$showHeader 	= (bool)Mage::helper('flikebox')->getShowHeader();
-				$showFace 		= (bool)Mage::helper('flikebox')->getShowFace();
-				$showStream 	= (bool)Mage::helper('flikebox')->getShowStream();
+				$showHeader 	= (bool)$this->getStoreConfig($this->getShowHeader());
+				$showFace 		= (bool)$this->getStoreConfig($this->getShowFace());
+				$showStream 	= (bool)$this->getStoreConfig($this->getShowStream());
 				
 				return '<iframe src="http://www.facebook.com/connect/connect.php?id='.$pageId.'&locale='.Mage::app()->getLocale()->getLocaleCode().'&connections='.$connections.'&stream='.$showStream.'&header='.$showHeader.'&width='.$width.'&height='.$height.'" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:'.$width.'px; height:'.$height.'px;" allowTransparency="true"></iframe>';
 			

@@ -6,8 +6,7 @@ class Vivacity_Flikebox_Model_Layout
          {
 			$option  = array(
 			"left"=>'Left Column',			
-			"right"=>'Right Column',
-			"custom"=>'Custom');
+			"right"=>'Right Column');
 			return $option;  
 	     }
 
