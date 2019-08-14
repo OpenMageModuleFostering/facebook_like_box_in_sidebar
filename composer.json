@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Facebook_Like_Box_In_Sidebar",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Shows LikeBox of your FaceBook Page on your store for customers to easily follow you on FaceBook.",
+    "authors": [
+    {
+        "name": "Team Vivacity",
+        "email": "vivacityinfotech.jaipur@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
