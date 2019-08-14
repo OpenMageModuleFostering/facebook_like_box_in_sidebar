@@ -7,7 +7,7 @@
 	</vivacity_infotech>
 	</tabs>	
     <sections>
-        <flikebox translate="label" module="flikebox">        
+        <flikebox translate="label" module="flikebox">      
 		    <label>Facebook Like Box</label>
 		    <tab>vivacity_infotech</tab>
 		    <sort_order>340</sort_order>
@@ -24,7 +24,7 @@
 		          <show_in_store>1</show_in_store>
 		          <comment>
 		            <![CDATA[
-					<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fvivacityinfotech&amp;width&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=1406798716268204" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:590px;" allowTransparency="true"></iframe>
+					<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fvivacityinfotech&amp;width&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;tabs=timeline,events,messages; header=true&amp;stream=false&amp;show_border=true&amp;appId=1406798716268204" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:590px;" allowTransparency="true"></iframe>
 					
 					]]>
 		          </comment>
@@ -84,10 +84,18 @@
 							    <show_in_store>1</show_in_store>
 							    <validate>required-entry validate-greater-than-zero</validate>
 							</connection>
+							<show_header_text translate="label">
+							    <label>Header</label>
+							    <frontend_type>text</frontend_type>
+							    <sort_order>5</sort_order>
+							    <show_in_default>1</show_in_default>
+							    <show_in_website>1</show_in_website>
+							    <show_in_store>1</show_in_store>
+							</show_header_text>
 							<show_header translate="label">
 							    <label>Show header</label>
 							    <frontend_type>select</frontend_type>
-							    <source_model>adminhtml/system_config_source_yesno</source_model>
+							    <source_model>adminhtml/System_Config_Source_Yesno</source_model>
 							    <sort_order>6</sort_order>
 							    <show_in_default>1</show_in_default>
 							    <show_in_website>1</show_in_website>
@@ -96,35 +104,103 @@
 							<show_face translate="label">
 							    <label>Show faces</label>
 							    <frontend_type>select</frontend_type>
-							    <source_model>adminhtml/system_config_source_yesno</source_model>
+							    <source_model>Vivacity_Flikebox_Model_System_Config_Yesno</source_model>
 							    <sort_order>7</sort_order>
 							    <show_in_default>1</show_in_default>
 							    <show_in_website>1</show_in_website>
 							    <show_in_store>1</show_in_store>
 							</show_face>	
-							<show_stream translate="label">
+							<!--<show_stream translate="label">
 							    <label>Show stream</label>
 							    <frontend_type>select</frontend_type>
-							    <source_model>adminhtml/system_config_source_yesno</source_model>
+							    <source_model>Vivacity_Flikebox_Model_System_Config_Yesno</source_model>
 							    <sort_order>8</sort_order>
 							    <show_in_default>1</show_in_default>
 							    <show_in_website>1</show_in_website>
 							    <show_in_store>1</show_in_store>
-							</show_stream>
-							<col_layout translate="label">
-							    <label>Position</label>
+							</show_stream>-->
+							<show_small_header translate="label">
+							    <label>Show Small Header</label>
 							    <frontend_type>select</frontend_type>
-							    <source_model>Vivacity_Flikebox_Model_Layout</source_model>
+							    <source_model>Vivacity_Flikebox_Model_System_Config_Yesno</source_model>
 							    <sort_order>9</sort_order>
 							    <show_in_default>1</show_in_default>
 							    <show_in_website>1</show_in_website>
 							    <show_in_store>1</show_in_store>
-<comment><![CDATA[If you choose "Custom" Position, then please use short codes:<br>
-For CMS Block: " {{block type="flikebox/Likebox"template="flikebox/like.phtml"}} " <br> 
-For Layout: " echo $this->getLayout()->createBlock('flikebox/Likebox')->setTemplate('flikebox/like.phtml')->toHtml(); "]]></comment>
+							</show_small_header>
+							<hide_cover_photo translate="label">
+							    <label>Hide Cover Photo</label>
+							    <frontend_type>select</frontend_type>
+							    <source_model>Vivacity_Flikebox_Model_System_Config_Yesno</source_model>
+							    <sort_order>10</sort_order>
+							    <show_in_default>1</show_in_default>
+							    <show_in_website>1</show_in_website>
+							    <show_in_store>1</show_in_store>
+							</hide_cover_photo>
+							<adapt_container_width translate="label">
+							    <label>Adapt to plugin container width</label>
+							    <frontend_type>select</frontend_type>
+							    <source_model>Vivacity_Flikebox_Model_System_Config_Yesno</source_model>
+							    <sort_order>11</sort_order>
+							    <show_in_default>1</show_in_default>
+							    <show_in_website>1</show_in_website>
+							    <show_in_store>1</show_in_store>
+							</adapt_container_width>
+							<language translate="label">
+							    <label>Language</label>
+							    <frontend_type>select</frontend_type>
+							    <source_model>Vivacity_Flikebox_Model_System_Config_Language</source_model>
+							    <sort_order>12</sort_order>
+							    <show_in_default>1</show_in_default>
+							    <show_in_website>1</show_in_website>
+							    <show_in_store>1</show_in_store>
+							</language>
+							<tabs translate="label">
+							    <label>Tabs</label>
+							    <frontend_type>text</frontend_type>
+							    <sort_order>13</sort_order>
+							    <show_in_default>1</show_in_default>
+							    <show_in_website>1</show_in_website>
+							    <show_in_store>1</show_in_store>
+							    <comment><![CDATA[You can now have timeline, events and messages tabs on the Extension.<br/>
+							    If you want to show tabs under your facebook like box,<br/> 
+							    Then add these three tab above in comma separate like:<br/>timeline,events,messages<br/>
+You can also use one of three tabs to show only one tab  like : timeline
+]]></comment>
+							</tabs>
+							<col_layout translate="label">
+							    <label>Position</label>
+							    <frontend_type>select</frontend_type>
+							    <source_model>Vivacity_Flikebox_Model_Layout</source_model>
+							    <sort_order>14</sort_order>
+							    <show_in_default>1</show_in_default>
+							    <show_in_website>1</show_in_website>
+							    <show_in_store>1</show_in_store>
+<comment></comment>
 							</col_layout>
-					</fields>	
+					</fields>
 		        </general>
+		         <setup_instruction translate="label comment">
+                    <label> Setup Instruction </label>
+                    <sort_order>70</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>
+                    <![CDATA[<p>If you want to choose "Custom" position, then please use the following code:</p>
+<p>For display your Facebook like box anywhere in your static block OR CMS pages then you can use the following code:<br/>
+<span style="font-family: 'Courier New', Courier, monospace; font-size: 11px;">{{block type="flikebox/Likebox"template="flikebox/like.phtml"}} </span></p>
+<p>For display your Facebook like box anywhere in your template files then you can use the following code:<br/>
+ <span style="font-family: 'Courier New', Courier, monospace; font-size: 11px;"> echo $this->getLayout()->createBlock('flikebox/Likebox')->setTemplate('flikebox/like.phtml')->toHtml();</span> <p>]]>
+<![CDATA[ <br/>
+<p><b>Note:</b> 
+ If you are using Magento 1.9.2.2 then after installation of Facebook like box extension please go on Admin Panel > System > Permissions > Blocks > Add New Block.
+ Now please enter 'flikebox/Likebox' in 'Block Name' field and choose 'Yes' in 'Is Allowed'. It's recommended to display Facebook like box on static block OR CMS pages.
+ </p>
+]]>
+
+</comment>
+                </setup_instruction>
 	        </groups>	       
         </flikebox>
   </sections>

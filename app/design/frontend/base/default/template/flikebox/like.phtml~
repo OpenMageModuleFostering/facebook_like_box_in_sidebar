@@ -1,6 +1,0 @@
-<?php
-$position = Mage::helper('flikebox')->getPosition();
-if($position == "custom"){
-echo $this->getLikebox();
-}
-?>

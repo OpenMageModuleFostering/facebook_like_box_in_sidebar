@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Vivacity_Flikebox>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </Vivacity_Flikebox>
     </modules>
     <frontend>
@@ -43,7 +43,7 @@
 	    </updates>
 	</layout>
     </adminhtml> 
-<global>       
+<global>
       <blocks>
             <flikebox>
                 <class>Vivacity_Flikebox_Block</class>
@@ -63,10 +63,16 @@
 		<width>195</width>
 		<height>400</height>
 		<connection>3</connection>
+		<show_header_text>Facebook Like Box</show_header_text>
 		<show_header>1</show_header>
 		<show_face>1</show_face>
-		<show_stream>1</show_stream>
+		<!--<show_stream>1</show_stream>-->
 		<col_layout>left</col_layout>
+		<show_small_header>1</show_small_header>
+		<hide_cover_photo>0</hide_cover_photo>
+		<adapt_container_width>1</adapt_container_width>
+		<tabs>timeline</tabs>
+		<language>en_US</language>
 	    </general>
 	</flikebox>
     </default>        

@@ -26,6 +26,10 @@ class Vivacity_Flikebox_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getStoreConfig('flikebox/general/connection');
     }
+     public function getShowHeaderText()
+    {
+        return Mage::getStoreConfig('flikebox/general/show_header_text');
+    }
     public function getShowHeader()
     {
         return Mage::getStoreConfig('flikebox/general/show_header');
@@ -37,5 +41,25 @@ class Vivacity_Flikebox_Helper_Data extends Mage_Core_Helper_Abstract
     public function getShowStream()
     {
         return Mage::getStoreConfig('flikebox/general/show_stream');
+    }
+     public function getShowSmallHeader()
+    {
+        return Mage::getStoreConfig('flikebox/general/show_small_header');
+    }
+    public function getHideCoverPhoto()
+    {
+        return Mage::getStoreConfig('flikebox/general/hide_cover_photo');
+    }
+     public function getAdaptContainerWidth()
+    {
+        return Mage::getStoreConfig('flikebox/general/adapt_container_width');
+    }
+     public function getLanguage()
+    {
+        return Mage::getStoreConfig('flikebox/general/language');
+    }
+     public function getTabs()
+    {
+        return Mage::getStoreConfig('flikebox/general/tabs');
     }
 }

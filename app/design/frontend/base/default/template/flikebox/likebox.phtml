@@ -1,6 +1,27 @@
+<!-- Facebook Like Product Button BEGIN - load the SDK asynchronously -->
+<!--<div id="fb-root"></div>
+<script>
+    /* <![CDATA[ */
+    window.fbAsyncInit = function() {
+        FB.init({appId: '1386792571543845', status: true, cookie: true,
+            xfbml: true});
+    };
+    (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol + '<?php echo $this->getScheme() ?>' +
+        '//connect.facebook.net/<?php echo $this->getLocale() ?>/all.js';
+        document.getElementById('fb-root').appendChild(e);
+    }());
+    /* ]]> */
+</script>-->
+<!-- Facebook Like Product Button END -->
 <?php
-$position = Mage::helper('flikebox')->getPosition();
+ $position = Mage::helper('flikebox')->getPosition();
 if($position != "custom"){
 echo $this->getLikebox();
 }
 ?>
+
+
+ 
+  
