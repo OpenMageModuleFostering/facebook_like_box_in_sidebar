@@ -1,17 +1,5 @@
 {
-    "name": "OpenMageModuleFostering/Facebook_Like_Box_In_Sidebar",
-    "type": "magento-module",
-    "license": "OSL-V3.0",
-    "homepage": "",
-    "description": "This extension is now available as a
-Facebook Like Box In Sidebar  on your store for customers to easily like &  share you on facebook.",
-    "authors": [
-    {
-        "name": "Team Vivacity",
-        "email": "vivacityinfotech.jaipur@gmail.com"
-    }
-],
-    "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    "keywords": [
+        "openmage-module"
+    ]
 }
